@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include <math.h>
 
 #define SWAP(a,b) {int temp; temp=a; a=b; b=temp;}
 
