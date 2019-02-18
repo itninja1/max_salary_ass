@@ -1,4 +1,5 @@
 #include "max_salary.h"
+#include "max_salary_naive.c"
 
 int min(int num1, int num2){
 	if (num1 >= num2) {
@@ -9,28 +10,14 @@ int min(int num1, int num2){
 	}
 }
 
-int countDigits(int n) 
-{
-	if(n == 0){
+
+/*int is_better(int num1, int num2){
+	if(num1 == 0){
 		return 1;
 	}
-	return floor(log10(n)+1); 
-}
-
-int add_two(int a, int b){
-	int n = a*pow(10,countDigits(b)) + b;
-	return n;
-}
-
-int concatenate_array(int *arr, int size){
-	int num = 0;
-	for(int i=0; i<size; i++){
-		num = add_two(num, arr[i]);
+	if(num2 == 0){
+		return 0;
 	}
-	return num;
-}
-
-int is_better(int num1, int num2){
 	int dig1 = countDigits(num1);
 	int dig2 = countDigits(num2);
 	int digits = min(dig1, dig2);
@@ -56,8 +43,15 @@ int is_better(int num1, int num2){
 		dig2 = countDigits(num2);
 	}
 	is_better(num1, num2);
-}
+} I realised too late there was a much easier way to do it by concatenating num1-num2 and comparing that to num2-num1.*/
 
+int is_better(int num1, int num2){
+	if(add_two(num1,num2)>add_two(num2,num1)){
+		return 0;
+	}else{
+		return 1;
+	}
+}
 
 int greedy(int array[], int size){
 	for(int i = 0; i < size; i++){

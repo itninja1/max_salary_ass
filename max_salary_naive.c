@@ -37,8 +37,7 @@ void heap_permutation(int a[], int size, int n)
 	int curr_num = concatenate_array(a, n);
 	if(curr_num > best_arr){
 		best_arr = curr_num;
-	}      
-	//printf("%d\n", best_arr);        
+	}             
 	return; 
     } 
   
@@ -57,11 +56,11 @@ void heap_permutation(int a[], int size, int n)
     } 
 } 
   
-/*Code to test permutations
-int main() { 
-    int a[] = {17, 9, 173, 3}; 
+//Code to test permutations
+/*int main() { 
+    int a[] = {86, 860, 149}; 
     int n = sizeof a/sizeof a[0]; 
     heap_permutation(a, n, n); 
     printf("%d\n", best_arr);
     return 0; 
-}*/ 
+}*/

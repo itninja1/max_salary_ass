@@ -10,5 +10,10 @@
 
 void print_array(int *arr, int size);
 void heap_permutation(int a[], int size, int n) ;
+int countDigits(int n) ;
+int add_two(int a, int b);
+int concatenate_array(int *arr, int size);
+
+
 
 #endif
